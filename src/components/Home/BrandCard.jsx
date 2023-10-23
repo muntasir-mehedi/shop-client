@@ -1,10 +1,10 @@
 
 import { Link } from "react-router-dom";
 
-const Brand = ({data}) => {
-    const {id, cover_img, title} = data
+const BrandCard = ({data}) => {
+    const { cover_img, title} = data
     return (
-        <Link to={`/showdetails/${id}`}>
+        <Link to={`/brand/${title}`}>
             <div className="my-2 px-4">
                 <div className="card card-compact w-72 md:w-96 h-72 bg-base-100 shadow-xl">
                     <figure><img src={cover_img} alt="Shoes" className="h-64 w-full" /></figure>
@@ -19,4 +19,4 @@ const Brand = ({data}) => {
     );
 };
 
-export default Brand;
+export default BrandCard;

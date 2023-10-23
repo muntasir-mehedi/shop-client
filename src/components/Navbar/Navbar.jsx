@@ -30,12 +30,12 @@ const Navbar = () => {
             user
             &&
             <>
-                <li><NavLink to={'/blog'}
+                <li><NavLink to={'/addProduct'}
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>Blog</NavLink></li>
-                <li><NavLink to={'/story'}
+                        isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>Add Product</NavLink></li>
+                <li><NavLink to={'/myCart'}
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>Story</NavLink></li>
+                        isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>My Cart</NavLink></li>
             </>
         }
     </>

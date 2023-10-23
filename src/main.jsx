@@ -12,6 +12,9 @@ import Home from './components/Home/Home.jsx';
 import Register from './components/Register/Register.jsx';
 import Login from './components/Login/Login.jsx';
 import AboutUs from './components/Aboutus/AboutUs';
+import Brand from './components/Brands/Brand';
+import AddProduct from './components/AddProduct/AddProduct';
+import MyCart from './components/MyCart/MyCart';
 
 
 const router = createBrowserRouter([
@@ -33,8 +36,20 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
+        path: "/brand/:title",
+        element: <Brand></Brand>
+      },
+      {
         path: "/aboutus",
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/addProduct",
+        element: <AddProduct></AddProduct>
+      },
+      {
+        path: "/myCart",
+        element: <MyCart></MyCart>
       }
     ]
   },

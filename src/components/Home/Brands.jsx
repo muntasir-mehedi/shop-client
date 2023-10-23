@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Brand from "./Brand";
+import BrandCard from "./BrandCard";
 
 
 const Brands = () => {
@@ -18,7 +18,7 @@ const Brands = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3">
                 {
-                    data?.map(card => <Brand key={data.id} data={card}></Brand>)
+                    data?.map(card => <BrandCard key={data.id} data={card}></BrandCard>)
                 }
             </div>
         </div>
