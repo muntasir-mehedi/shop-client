@@ -59,19 +59,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/samsung",
-        element: <Samsung></Samsung>
+        element: <Samsung></Samsung>,
+        loader: () => fetch('http://localhost:5000/data?brand=Samsung')
       },
       {
         path: "/google",
-        element: <Google></Google>
+        element: <Google></Google>,
+        loader: () => fetch('http://localhost:5000/data?brand=Google')
       },
       {
         path: "/sony",
-        element: <Sony></Sony>
+        element: <Sony></Sony>,
+        loader: () => fetch('http://localhost:5000/data?brand=Sony')
       },
       {
         path: "/asus",
-        element: <Asus></Asus>
+        element: <Asus></Asus>,
+        loader: () => fetch('http://localhost:5000/data?brand=Asus')
       },
       {
         path: "/intel",
