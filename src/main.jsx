@@ -12,9 +12,14 @@ import Home from './components/Home/Home.jsx';
 import Register from './components/Register/Register.jsx';
 import Login from './components/Login/Login.jsx';
 import AboutUs from './components/Aboutus/AboutUs';
-import Brand from './components/Brands/Brand';
 import AddProduct from './components/AddProduct/AddProduct';
 import MyCart from './components/MyCart/MyCart';
+import Apple from './components/Brand/apple';
+import Samsung from './components/Brand/samsung';
+import Google from './components/Brand/google';
+import Sony from './components/Brand/Sony';
+import Asus from './components/Brand/Asus';
+import Intel from './components/Brand/Intel';
 
 
 const router = createBrowserRouter([
@@ -36,10 +41,6 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path: "/brand/:title",
-        element: <Brand></Brand>
-      },
-      {
         path: "/aboutus",
         element: <AboutUs></AboutUs>
       },
@@ -50,7 +51,32 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <MyCart></MyCart>
-      }
+      },
+      {
+        path: "/apple",
+        element: <Apple></Apple>,
+        loader: () => fetch('http://localhost:5000/data?brand=Apple')
+      },
+      {
+        path: "/samsung",
+        element: <Samsung></Samsung>
+      },
+      {
+        path: "/google",
+        element: <Google></Google>
+      },
+      {
+        path: "/sony",
+        element: <Sony></Sony>
+      },
+      {
+        path: "/asus",
+        element: <Asus></Asus>
+      },
+      {
+        path: "/intel",
+        element: <Intel></Intel>
+      },
     ]
   },
 ]);
