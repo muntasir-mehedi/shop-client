@@ -20,6 +20,7 @@ import Google from './components/Brand/google';
 import Sony from './components/Brand/Sony';
 import Asus from './components/Brand/Asus';
 import Intel from './components/Brand/Intel';
+import Update from './components/Update/Update';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/addProduct",
         element: <AddProduct></AddProduct>
+      },
+      {
+        path: "/update",
+        element: <Update></Update>
       },
       {
         path: "/myCart",
