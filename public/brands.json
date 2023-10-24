@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "cover_img": "https://i.ibb.co/0fv3qZ8/pexels-eyma-d-13748756.jpg",
-    "title": "Apple"
+    "cover_img1": "https://i.ibb.co/0fv3qZ8/pexels-eyma-d-13748756.jpg",
+    "title1": "Apple"
   },
   {
     "id": 2,
-    "cover_img": "https://i.ibb.co/JCt2JH0/Samsung-Logo.jpg",
-    "title": "Samsung"
+    "cover_img2": "https://i.ibb.co/JCt2JH0/Samsung-Logo.jpg",
+    "title2": "Samsung"
   },
   {
     "id": 3,
-    "cover_img": "https://i.ibb.co/51s6fwC/2919654-5611940169-Googl.png",
-    "title": "Google"
+    "cover_img3": "https://i.ibb.co/51s6fwC/2919654-5611940169-Googl.png",
+    "title3": "Google"
   },
   {
     "id": 4,
-    "cover_img": "https://i.ibb.co/3NkRGkW/sony.jpg",
-    "title": "Sony"
+    "cover_img4": "https://i.ibb.co/3NkRGkW/sony.jpg",
+    "title4": "Sony"
   },
   {
     "id": 5,
-    "cover_img": "https://i.ibb.co/8rdbsMS/asus-logo.jpg",
-    "title": "Asus"
+    "cover_img5": "https://i.ibb.co/8rdbsMS/asus-logo.jpg",
+    "title5": "Asus"
   },
   {
     "id": 6,
-    "cover_img": "https://i.ibb.co/Mk2QXzR/Intel-Core-2023-logo.png",
-    "title": "Intel"
+    "cover_img6": "https://i.ibb.co/Mk2QXzR/Intel-Core-2023-logo.png",
+    "title6": "Intel"
   }
 ]
