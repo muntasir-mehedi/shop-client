@@ -19,23 +19,23 @@ const Navbar = () => {
     const navlink = <>
         <li><NavLink to={'/'}
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>Home</NavLink></li>
+                isPending ? "pending" : isActive ? "text-green-500 underline font-semibold" : ""}>Home</NavLink></li>
         <li><NavLink to={'/register'}
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>Register</NavLink></li>
+                isPending ? "pending" : isActive ? "text-green-500 underline font-semibold" : ""}>Register</NavLink></li>
         <li><NavLink to={'/aboutus'}
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>About Us</NavLink></li>
+                isPending ? "pending" : isActive ? "text-green-500 underline font-semibold" : ""}>About Us</NavLink></li>
         {
             user
             &&
             <>
                 <li><NavLink to={'/addProduct'}
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>Add Product</NavLink></li>
+                        isPending ? "pending" : isActive ? "text-green-500 underline font-semibold" : ""}>Add Product</NavLink></li>
                 <li><NavLink to={'/myCart'}
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "text-blue-500 underline font-semibold" : ""}>My Cart</NavLink></li>
+                        isPending ? "pending" : isActive ? "text-green-500 underline font-semibold" : ""}>My Cart</NavLink></li>
             </>
         }
     </>
@@ -50,7 +50,8 @@ const Navbar = () => {
                         {navlink}
                     </ul>
                 </div>
-                <a className="font-mono text-xl font-semibold"><span className="text-4xl font-semibold text-blue-600">E</span>venters</a>
+                <img src="https://i.ibb.co/L5sV08J/eShop.png" alt="logo" />
+                <a className="font-mono text-xl font-semibold">Shop</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-3 p-2">
@@ -74,10 +75,10 @@ const Navbar = () => {
                                     <span>{user.email}</span>
                                 </ul>
                             </div>
-                            <a onClick={handleLogOut} className="btn btn-sm">Sign out</a>
+                            <a onClick={handleLogOut} className="btn btn-sm btn-success text-white">Sign out</a>
                         </>
                         :
-                        <li className=" btn btn-ghost"><Link to={'/login'} >Login</Link></li>
+                        <li className=" btn btn-success"><Link to={'/login'} >Login</Link></li>
                 }
             </div>
         </div>

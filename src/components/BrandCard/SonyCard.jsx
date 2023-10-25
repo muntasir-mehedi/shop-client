@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const SonyCard = ({card}) => {
-    const { name, brand, type, price, rating, photo } = card;
+    const {_id, name, brand, type, price, rating, photo } = card;
     return (
         <>
             <div className="md:w-5/6 my-4 mx-6 pl-4">
@@ -14,8 +15,8 @@ const SonyCard = ({card}) => {
                         <p className="text-sm font-medium md:font-semibold">Price: {price}$</p>
                         <p className="text-sm font-medium md:font-semibold">Ratings: {rating}/5</p>
                         <div className="card-actions">
-                            <button className="rounded-lg text-sm font-medium px-2 py-1 btn-success">See Details</button>
-                            <button className="rounded-lg text-sm font-medium px-2 py-1 btn-warning">Update</button>
+                        <Link to={`/seeDetails/${name}`}><button className="rounded-lg text-sm font-medium px-2 py-1 btn-success">See Details</button></Link>
+                            <Link to={`/update/${_id}`}><button className="rounded-lg text-sm font-medium px-2 py-1 btn-warning">Update</button></Link>
                         </div>
                     </div>
                 </div>
