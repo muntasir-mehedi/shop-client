@@ -1,11 +1,39 @@
+import { useContext } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../authprovider/AuthProvider";
 
 const SeeDetails = () => {
     const datas = useLoaderData();
-    console.log(datas);
+    const {user} = useContext(AuthContext)
+    const email = user.email
+
     const { name } = useParams();
     const data = datas.find(data => data.name === name)
-    console.log(data);
+
+    
+    const handleCart = () =>{
+        fetch('http://localhost:5000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({data, email})
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Product Added.....',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
+
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
@@ -18,7 +46,7 @@ const SeeDetails = () => {
                     <p className="font-semibold">Ratings: {data.rating}/5</p>
                     <p className="py-4 font-semibold">Description:- {data.description}</p>
 
-                    <Link to={'/myCart'}><button className="btn btn-success mt-3 ml-4">add to cart</button></Link>
+                    <Link to={'/myCart'}><button onClick={handleCart} className="btn btn-success mt-3 ml-4">add to cart</button></Link>
                 </div>
             </div>
         </div>
